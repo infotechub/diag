@@ -1,0 +1,123 @@
+﻿@model NovoDiagnosis.Models.Staff
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Staff</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanySubsidiary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanySubsidiary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffFullname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaffFullname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffPlanid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaffPlanid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HasProfile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HasProfile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profileid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profileid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Createdby)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Createdby)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Guid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Guid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsExpunged)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsExpunged)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaffId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NewStaffId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NewStaffId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StafflinkDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StafflinkDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StafflinkUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StafflinkUser)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffJobId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaffJobId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

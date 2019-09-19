@@ -1,0 +1,144 @@
+﻿@model NovoDiagnosis.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PasswordHash)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PasswordHash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PasswordSalt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PasswordSalt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentEncryption)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentEncryption)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastLoginDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastLoginDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginAttempts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginAttempts)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResetPasswordGuid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResetPasswordGuid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResetPasswordExpiry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResetPasswordExpiry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DisableNotifications)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DisableNotifications)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastNotificationReadDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastNotificationReadDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Uiculture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Uiculture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobilephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mobilephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CugMobilephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CugMobilephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dob)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dob)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Guid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Guid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

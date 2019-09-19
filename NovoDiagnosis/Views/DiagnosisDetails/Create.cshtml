@@ -1,0 +1,186 @@
+﻿@model NovoDiagnosis.Models.DiagnosisDetails
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row mb">
+            <div class="col-lg-12">
+                <!-- /form-panel -->
+                <h3 align="centre" class="text-center">Book Appointment For Annual Medical Check</h3>
+
+                @{
+                    var user = await UserManager.GetUserAsync(User);
+                }
+
+                <div class="row mb">
+                    <!-- page start-->
+                    <div class="content-panel border rounded">
+                        <div class="adv-table">
+                          
+                            <p align="center"> Kindly fill the form below to submit an appointment for medical check. <br />You will receive a confirmation email if your request is approved. <br />Ensure you check both inbox and soam for the mail.</p>
+                            <div class="container">
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+
+                                        <input type="hidden" asp-for="FullName" class="form-control" value="@user.FullName" />
+                                        <span asp-validation-for="FullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input type="hidden" asp-for="StaffId" class="form-control" value="@user.StaffId" />
+                                        <span asp-validation-for="StaffId" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="State" class="form-control">
+                                            <option value="Abia">Abia</option>
+                                            <option value="Adamawa">Adamawa</option>
+                                            <option value="Akwa Ibom">Akwa Ibom</option>
+                                            <option value="Anambra">Anambra</option>
+                                            <option value="Bauchi">Bauchi</option>
+                                            <option value="Bayelsa ">Bayelsa  </option>
+                                            <option value="Benue">Benue</option>
+                                            <option value="Borno">Borno</option>
+                                            <option value="Cross River">Cross River</option>
+                                            <option value="Delta">
+                                                Delta
+                                            </option>
+                                            </select>
+                                    </div>
+                                    
+
+                                    <div class="form-group">
+                                       
+                                        <select name="Provider" class="form-control">
+                                            <option value="Afriglobal Medicare">Afriglobal Medicare -Ikeja, Lagos</option>
+                                            <option value="Afriglobal Medicare">Afriglobal Medicare - By Conservation Centre Eti-Osa East Peninsula </option>
+                                            <option value="Echolab ">Echolab - Victoria Island</option>
+                                            <option value="Union Diagnostic">Union Diagnostic - Abeokuta, Ogun State</option>
+                                            <option value="Ace Medicare Clinics">Ace Medicare Clinics - Ota, Ogun State</option>
+                                            <option value="Mercy Group Clincs">Mercy Group Clincs - Abeokuta, Ogun State </option>
+                                            <option value="Lanik Medical Center  ">Lanik Medical Center - Ijebu Ode, Ogun State</option>
+                                            <option value="Union Diagnostic">Union Diagnostic - Mokola, Ibadan, Oyo State</option>
+                                            <option value="Mecure Healthcare Ltd ">Mecure Healthcare Ltd  - Old Bodija, Ibadan</option>
+                                            <option value="Sijuwade Specialist Hospital">Sijuwade Specialist Hospital - Akure, Ondo State</option>
+                                            <option value="Hopeland Specialist Medical Center">Hopeland Specialist Medical Center   - Akure, Ondo State</option>
+                                            <option value="Adetade Hospital">Adetade Hospital - Ajilosun, Ado-Ekiti</option>
+                                            <option value="Maternal and Child Hospital ">Maternal and Child Hospital  - Adebayo Road, Ado-Ekiti</option>
+                                            <option value="Union Diagnostic">Union Diagnostic - Former Agric Building, Osogbo </option>
+                                            <option value="Onward Hospital ">Onward Hospital  - Agundelewo Ilobu Road, Osogbo </option>
+                                            <option value="Living Hope Hospital ">Living Hope Hospital  - Eleyele Ile-Ife </option>
+                                            <option value="Union Diagnostic">Union Diagnostic - 168, Ibrahim Taiwo Road, Ilorin.</option>
+                                            <option value="Yusjib Industrial Medicare">Yusjib Industrial Medicare -  Adeta Ilorin </option>
+                                            <option value="Niger Hospital">Niger Hospital  - IBB Way Lokoja </option>
+                                            <option value="Berith Specialist Hospital">Berith Specialist Hospital  - Kwamba Layout Suleja </option>
+                                            <option value="Citizen Hospital">Citizen Hospital  - Low Cost GRA Suleja </option>
+                                            <option value="Sandra Hospital">Sandra Hospital  - 24 JS Tarka Road, Opp Maltino Filing Station, Makurdi </option>
+                                            <option value="Our Lady of Apostle">Our Lady of Apostle  - 1 Zaria Bypass, Jos  </option>
+                                            <option value="Chilas Hospital">Chilas  - 20  Zaria Bypass Jos </option>
+                                            <option value="Al-Barka Hospital">Al-Barka Hospital  - Behind Inuwa Dutse Estate, Dutse </option>
+                                            <option value="Sauki Hospital">Sauki Hospital  - Assakio Lafia Nasarawa  </option>
+                                            <option value="Life Bridge Diagnostics">Life Bridge Diagnostics - Garki 2 Abuja </option>
+                                            <option value="Dara Medical Center">Dara Medical Center   - Area 2 Section 2 Garki </option>
+                                            <option value="Springs Clinic">Springs Clinic - 18 Scotland Crescent, Aba </option>
+                                            <option value="New Era Hospital ">New Era Hospital   - Azikwe Road, By East Aba </option>
+                                            <option value="Obioma Hospital">Obioma Hospital - 21 School Road Umuahia  </option>
+                                            <option value="Dr. Nlogha Memorial Medical Center">Dr. Nlogha Memorial Medical Center  - Uwani, Enugu State </option>
+                                            <option value="Life Bridge Diagnostics">Life Bridge Diagnostics  -Asatu, Enugu</option>
+                                            <option value="Toronto Hospital">Toronto Hospital - 2, Upper Niger Bridge Road, Onitsha, Anambra State</option>
+                                            <option value="Ifebi Medical Center">Ifebi Medical Center -  16A Igwebuike School Road, Awka  </option>
+                                            <option value="Ikenegbu Hospital">Ikenegbu Hospital   - Pat Amadi Street, Owerri  </option>
+                                            <option value="Ezem Medical Center">Ezem Medical Center  - 2/4 Osuji Street, By Tetlo Owerri </option>
+                                            <option value="Christ the King Hospital">Christ the King Hospital    - 85 Afikpo Road Abakaliki Ebonyi State </option>
+                                            <option value="Mater Misericordiae Hospital">Mater Misericordiae Hospital  - Afikpo Ebonyi </option>
+                                            <option value="Faith Foundation Specialist Clinic">Faith Foundation Specialist Clinic  - 57 Ndidem Usang Iso Road, Calabar</option>
+                                            <option value="Aruba Specialist Hospital">Aruba Specialist Hospital   - 23 Nsefik Eyo Close, Off Fiesta Fries Calabar  </option>
+                                            <option value="Bakor Hospital">Bakor Hospital   - Hospital Road, Nde Ikom  </option>
+                                            <option value="St Anthanasius' Hospital Ltd">St Anthanasius' Hospital Ltd  - Federal Housing Estate Abak Road Uyo. </option>
+                                            <option value="Nduye Medical Services">Nduye Medical Services  - 29, Ekpene Ukpa Street, Eket Akwa Ibom </option>
+                                            <option value="Noxford Hospital">Noxford Hospital    - Plot 96 Rumuogba Estate, Port Harcourt  </option>
+                                            <option value="St. Martins Hospital">St. Martins Hospital  - 21 Stadium Road, PH  </option>
+                                            <option value="Crest Consultants Clinic">Crest Consultants Clinic  - Off Isaac Boro Expressway, Yenogoa  </option>
+                                            <option value="Gloryland Hospital">Gloryland Hospital - DSP Alamaieseya Way, Ovom Yenegoa </option>
+                                            <option value="Edi International Clinic">Edi International Clinic   - No 1 Coronation Drive, Off Aideyan Benin  </option>
+                                            <option value="Narrow Way Clinic">Narrow Way Clinic  - Off Efionayi Road, Aduwawa, Benin </option>
+                                            <option value="West End Diagnostic Hospital ">West End Diagnostic Hospital  - West End Hospital Road, DDPA Effurun, Warri </option>
+                                            <option value="Twins City and Diagnostics Center">Twins City and Diagnostics Center -  99, Osadebe Way, Asaba   </option>
+                                            <option value="Borno Medical Center">Borno Medical Center   - Barkashil Ibrahim Way, Maiduguri  </option>
+                                            <option value="Sabana Hospital">Sabana Hospital  - Federal Low Cost Road, Gombe </option>
+                                            <option value="City Medical Center">City Medical Center     - Zango Area, Yobe  </option>
+                                            <option value="Peace Hospital">Peace Hospital  - 21 Mohammed Mustapha Way, Jimeta Yola  </option>
+                                            <option value="New Boshang Clinic and Maternity ">New Boshang Clinic and Maternity   - Karawe Extension Jimeta Yola </option>
+                                            <option value="NAF Reference Hospital ">NAF Reference Hospital  - 261 NAF Hospital Bauchi-Kano Road , Bauchi </option>
+                              
+
+                                        </select>
+                                        
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label asp-for="Email" class="control-label"></label>
+                                        <input asp-for="Email" class="form-control" value="@user.Email" readonly />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="PhoneNumber" class="control-label"></label>
+                                        <input asp-for="PhoneNumber" class="form-control" value="@user.PhoneNumber" readonly />
+                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AppointmentDate" class="control-label"></label>
+                                        <input asp-for="AppointmentDate" class="form-control" />
+                                        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AppointmentTime" class="control-label"></label>
+                                        <input asp-for="AppointmentTime" class="form-control" />
+                                        <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+
+                                        <input type="hidden" asp-for="UserName" class="form-control" value="@user.UserName" />
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="PresentingComplain" class="control-label"></label>
+                                        <textarea asp-for="PresentingComplain" class="form-control"></textarea>
+                                        <span asp-validation-for="PresentingComplain" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="Create Appointment" class="btn btn-facebook" />
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <div>
+                                <a asp-action="Index">Back to List</a>
+                            </div>
+
+                            @section Scripts {
+                                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section><section></section>

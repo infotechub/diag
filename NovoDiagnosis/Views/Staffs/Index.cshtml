@@ -1,0 +1,131 @@
+﻿@model IEnumerable<NovoDiagnosis.Models.Staff>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanySubsidiary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffFullname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffPlanid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasProfile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profileid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Createdby)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsExpunged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewStaffId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StafflinkDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StafflinkUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffJobId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanySubsidiary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffFullname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffPlanid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasProfile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profileid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Createdby)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsExpunged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewStaffId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StafflinkDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StafflinkUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffJobId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

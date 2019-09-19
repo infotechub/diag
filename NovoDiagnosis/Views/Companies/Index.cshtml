@@ -1,0 +1,239 @@
+﻿@model IEnumerable<NovoDiagnosis.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stateid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Parentid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Logoid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubscriptionStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plans)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizationStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizationNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisapprovalNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisapprovedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisapprovalDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeletionNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubsidiaryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SiteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyListPageId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogoLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegAgeLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeboperationMode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRenewal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stateid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parentid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logoid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubscriptionStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plans)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizationStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizationNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisapprovalNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisapprovedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisapprovalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeletionNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubsidiaryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiteId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyListPageId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogoLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegAgeLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeboperationMode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRenewal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,155 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row mb">
+            <div class="col-lg-12">
+                <!-- /form-panel -->
+                <h3 align="centre" class="text-center">User's Profile</h3>
+
+                @{
+                    var user = await UserManager.GetUserAsync(User);
+
+                }
+
+                <div class="row mb">
+
+                    <div class="col-md-12">
+                        <!-- page start-->
+                        <div class="content-panel border rounded">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <div class="adv-table">
+                                <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="claims" width="70%">
+                                    <thead>
+                                        <tr>
+
+                                            <td>Full Name: </td>
+                                            <td>@user.FullName</td>
+                                        </tr>
+                                        <tr>  <td>Email Address: </td><td> @user.Email</td></tr>
+                                        <tr><td>Staff Id:</td><td>  @user.StaffId</td></tr>
+                                        <tr><td>Phone Number: </td><td> @user.PhoneNumber</td></tr>
+                                        <tr><td>Password: </td>
+                                    <td>************</td> </tr>
+                                    <tr>  <td>City: </td><td> @user.City</td></tr>
+                                    <tr><td>State:</td><td>  @user.State</td></tr>
+                                    <tr><td>Country: </td><td> @user.Country</td></tr>
+
+
+
+                                    </h4>
+
+                                    </tr>
+                                    </thead>
+                                </table>
+
+
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                </table>
+                            </div>
+
+                            <div class="col-md-5">
+
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+
+                            </div>
+
+
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+    </section>
+</section>
+
+
+@section Scripts{
+    <script src="~/js/claim.js"></script>
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    var dataTable;
+    $(document).ready(function () {
+        loadDataTable();
+    });
+    (function ($) {
+        $("#claims").DataTable({
+            ajax: {
+
+
+            });
+    })(jQuery);
+
+
+</script>
+
+

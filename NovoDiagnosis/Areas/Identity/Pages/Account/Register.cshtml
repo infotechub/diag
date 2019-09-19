@@ -1,0 +1,144 @@
+﻿@page
+@model RegisterModel
+@using NovoDiagnosis.Models
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+    <title>Novo - Provider Portal Login</title>
+    <!-- Favicons -->
+    <link href="~/img/icon.png" rel="apple-touch-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/style-responsive.css" rel="stylesheet">
+</head>
+
+<body style="background-color:#669BE9 ">
+    <h2>@ViewData["Title"]</h2>
+    <div align="center"></div>
+    <section id="main-content">
+        <section class="wrapper">
+            <div id="login-page">
+                        <div class="col-lg-10" >
+                                <div class="content-panel border rounded">
+                                   
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            
+                                            <div class="col-md-6">
+                                                <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+                                                    <img src="~/img/logo.png" width="400" height="200">
+                                                    <h3 align="centre" class="text-center">Book Appointment For Annual Medical Check</h3>
+
+                                                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.FullName"></label>
+                                                        <input asp-for="Input.FullName" class="form-control" />
+                                                        <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.StaffId"></label>
+                                                        <input asp-for="Input.StaffId" class="form-control" />
+                                                        <span asp-validation-for="Input.StaffId" class="text-danger"></span>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.PhoneNumber"></label>
+                                                        <input asp-for="Input.PhoneNumber" class="form-control" />
+                                                        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.Street"></label>
+                                                        <input asp-for="Input.Street" class="form-control" />
+                                                        <span asp-validation-for="Input.Street" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.City"></label>
+                                                        <input asp-for="Input.City" class="form-control" />
+                                                        <span asp-validation-for="Input.City" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.State"></label>
+                                                        <input asp-for="Input.State" class="form-control" />
+                                                        <span asp-validation-for="Input.State" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.Country"></label>
+                                                        <input asp-for="Input.Country" class="form-control" />
+                                                        <span asp-validation-for="Input.Country" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.Email"></label>
+                                                        <input asp-for="Input.Email" class="form-control" />
+                                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.Password"></label>
+                                                        <input asp-for="Input.Password" class="form-control" />
+                                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label asp-for="Input.ConfirmPassword"></label>
+                                                        <input asp-for="Input.ConfirmPassword" class="form-control" />
+                                                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-3"></div>
+                                                        <div class="col-5">
+
+                                                            <input type="hidden" name="rdUserRole" value="@SD.Admin" />
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-facebook">Sign Up</button>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-3"></div>
+                                        </div>
+
+                                        @section Scripts {
+                                            <partial name="_ValidationScriptsPartial" />
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                       
+                  
+
+        </section><section></section>
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <!--BACKSTRETCH-->
+        <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+        <script type="text/javascript" src="~/lib/jquery.backstretch.min.js"></script>
+        <script>
+            $.backstretch("~/img/ju-on-e6XsI7qqvAA-unsplash.jpg", {
+      speed: 500
+    });
+        </script>
+</body>
+
+</html>

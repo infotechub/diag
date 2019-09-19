@@ -1,0 +1,317 @@
+﻿@model IEnumerable<NovoDiagnosis.Models.Enrollee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Parentid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Parentrelationship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Policynumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Othernames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maritalstatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Residentialaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stateid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lgaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobilenumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emailaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sponsorshiptype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sponsorshiptypeothername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preexistingmedicalhistory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sponsorshiptypenote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Companyid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscriptionplanid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hasdependents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specialidcardfield1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specialidcardfield2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specialidcardfield3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staffprofileid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Primaryprovider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hasactivesubscription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isexpundged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpungeNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expungedby)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dateexpunged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Createdby)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datereceived)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnrolleePassportId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCardPrinted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefPolicynumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasRefPolicyNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobilenumber2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastyearBirthdaymsgsent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bulkjobid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Passphrase)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parentid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parentrelationship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Policynumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Othernames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maritalstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Residentialaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stateid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lgaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobilenumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emailaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sponsorshiptype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sponsorshiptypeothername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preexistingmedicalhistory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sponsorshiptypenote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Companyid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subscriptionplanid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hasdependents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialidcardfield1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialidcardfield2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialidcardfield3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staffprofileid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Primaryprovider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hasactivesubscription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isexpundged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpungeNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expungedby)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dateexpunged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Createdby)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datereceived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrolleePassportId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCardPrinted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefPolicynumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasRefPolicyNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobilenumber2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastyearBirthdaymsgsent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bulkjobid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passphrase)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

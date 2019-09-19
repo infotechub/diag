@@ -1,0 +1,119 @@
+﻿@model NovoDiagnosis.Models.DiagnosisDetails
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row mb">
+            <div class="col-lg-12">
+                <!-- /form-panel -->
+                <h3 align="centre" class="text-center">Book Appointment For Annual Medical Check</h3>
+
+                @{
+                    var user = await UserManager.GetUserAsync(User);
+                }
+
+                <div class="row mb">
+                    <!-- page start-->
+                    <div class="content-panel border rounded">
+                        <div class="adv-table">
+                          
+                            <p align="center"> Kindly fill the form below to submit an appointment for medical check. <br />You will receive a confirmation email if your request is approved. <br />Ensure you check both inbox and soam for the mail.</p>
+                            <div class="container">
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+
+                                        <input type="hidden" asp-for="FullName" class="form-control" value="@user.FullName" />
+                                        <span asp-validation-for="FullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input type="hidden" asp-for="StaffId" class="form-control" value="@user.StaffId" />
+                                        <span asp-validation-for="StaffId" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="State" class="control-label"></label>
+                                        <input asp-for="State" class="form-control" value="@user.State" readonly />
+                                        <span asp-validation-for="State" class="text-danger"></span>
+                                    </div>
+                                    
+
+                                    <div class="form-group">
+                                       
+                                        <select name="Provider" class="form-control">
+                                            <option value="Afriglobal Medicare">Afriglobal Medicare -Ikeja, Lagos</option>
+                                            <option value="Afriglobal Medicare">Afriglobal Medicare - By Conservation Centre Eti-Osa East Peninsula </option>
+                                            <option value="Echolab ">Echolab - Victoria Island</option>
+                                            <option value="Union Diagnostic">Union Diagnostic - Abeokuta, Ogun State</option>
+                                        </select>
+                                        
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label asp-for="Email" class="control-label"></label>
+                                        <input asp-for="Email" class="form-control" value="@user.Email" readonly />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="PhoneNumber" class="control-label"></label>
+                                        <input asp-for="PhoneNumber" class="form-control" value="@user.PhoneNumber" readonly />
+                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AppointmentDate" class="control-label"></label>
+                                        <input asp-for="AppointmentDate" class="form-control" />
+                                        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AppointmentTime" class="control-label"></label>
+                                        <input asp-for="AppointmentTime" class="form-control" />
+                                        <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+
+                                        <input type="hidden" asp-for="UserName" class="form-control" value="@user.UserName" />
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="PresentingComplain" class="control-label"></label>
+                                        <textarea asp-for="PresentingComplain" class="form-control"></textarea>
+                                        <span asp-validation-for="PresentingComplain" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="Create Appointment" class="btn btn-facebook" />
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <div>
+                                <a asp-action="Index">Back to List</a>
+                            </div>
+
+                            @section Scripts {
+                                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section><section></section>

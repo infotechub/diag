@@ -1,0 +1,165 @@
+﻿@model NovoDiagnosis.Models.CompanyPlan
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CompanyPlan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Companyid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Companyid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Planid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Planid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Planfriendlyname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Planfriendlyname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnualPremium)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnnualPremium)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Discountlump)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Discountlump)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Discountperenrollee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Discountperenrollee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Createdby)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Createdby)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizationStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizationStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizationNote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizationNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowChildEnrollee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AllowChildEnrollee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DisapprovalNote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DisapprovalNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DisapprovedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DisapprovedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DisapprovalDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DisapprovalDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Guid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Guid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SiteId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxNoOfDependant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxNoOfDependant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderConsession)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProviderConsession)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

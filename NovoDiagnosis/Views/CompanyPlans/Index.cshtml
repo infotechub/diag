@@ -1,0 +1,173 @@
+﻿@model IEnumerable<NovoDiagnosis.Models.CompanyPlan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Companyid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planfriendlyname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnualPremium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discountlump)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discountperenrollee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Createdby)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizationStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizationNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllowChildEnrollee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisapprovalNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisapprovedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisapprovalDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SiteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxNoOfDependant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProviderConsession)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Companyid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Planid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Planfriendlyname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnualPremium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discountlump)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discountperenrollee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Createdby)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizationStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizationNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllowChildEnrollee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisapprovalNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisapprovedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisapprovalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiteId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxNoOfDependant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProviderConsession)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

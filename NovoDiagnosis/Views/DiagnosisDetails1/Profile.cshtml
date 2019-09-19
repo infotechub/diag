@@ -1,0 +1,142 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row mb">
+            <div class="col-lg-12">
+                <!-- /form-panel -->
+                <h3 align="centre" class="text-center">User's Profile</h3>
+
+                @{
+                    var user = await UserManager.GetUserAsync(User);
+
+                }
+
+                <div class="row mb">
+
+                    <div class="col-md-12">
+                        <!-- page start-->
+                        <div class="content-panel border rounded">
+                            <div class="adv-table">
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <h4 align="center">
+                                    Full Name: @user.FullName<br />
+                                    Email Address:  @user.Email<br />
+                                    Staff Id:  @user.StaffId<br />
+                                    Phone Number:  @user.PhoneNumber<br />
+                                    Location  @user.State
+
+
+
+                                </h4>
+
+
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                </table>
+                            </div>
+
+                                <div class="col-md-5">
+
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+    </section>
+</section>
+
+
+@section Scripts{
+    <script src="~/js/claim.js"></script>
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    var dataTable;
+    $(document).ready(function () {
+        loadDataTable();
+    });
+    (function ($) {
+        $("#claims").DataTable({
+            ajax: {
+
+
+            });
+    })(jQuery);
+
+
+</script>
+
+
