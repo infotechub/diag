@@ -426,7 +426,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n                                            </td>\r\n\r\n                                            <td>\r\n                                                ");
             EndContext();
             BeginContext(8867, 172, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5a876707c184825a6c12777ef4843fd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "574f46c95cca425ba4fead35d96b803c", async() => {
                 BeginContext(8984, 51, true);
                 WriteLiteral("<i class=\"fa fa-pencil-square\"></i> Approve Request");
                 EndContext();
@@ -501,7 +501,7 @@ using Microsoft.AspNetCore.Identity;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(9773, 37, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6717027f23f4a30a08de2ba27e59c4f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc143bf94caf4ab8a8cfd018c2163edf", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

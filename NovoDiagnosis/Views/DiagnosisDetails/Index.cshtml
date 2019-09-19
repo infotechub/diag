@@ -32,160 +32,305 @@
                                 <br /><br /><br /><br /><br />
                                 @if (SignInManager.IsSignedIn(User))
                                 {
-                                    <h4 align="center">Appointment List for @user.FullName</h4>
+                                    <h4 align="center">Appointment List </h4>
+                                    <h4 align="center">Plan To Be In The Hospital On or Before 9am</h4>
                                 }
                                 else
                                 {
                                     <h4 align="center">Kindly Sign In </h4>
                                 }
 
+                                @if (user.FullName == "Victor Akinmejiwa")
+                                {
 
-                                <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="claims" width="70%">
-                                    <thead>
-                                        <tr>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="claims" width="70%">
+                                        <thead>
+                                            <tr>
 
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Provider)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.State)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Email)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.PhoneNumber)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.AppointmentDate)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.AppointmentTime)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Approve)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Reject)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Recommendation)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.AuthorizationCode)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.CompletedAnnualMedical)
-                                            </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Provider)
+                                                </th>
 
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Diagnosis)
-                                            </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Email)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.AppointmentDate)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.AppointmentTime)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Approve)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Reject)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Recommendation)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.AuthorizationCode)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.CompletedAnnualMedical)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Diagnosis)
+                                                </th>
 
-
-                                            <th></th>
+                                                <th></th>
 
 
-                                        </tr>
-                                    </thead>
+                                            </tr>
+                                        </thead>
 
-                                    <tbody>
-                                        @foreach (var item in Model)
-                                        {
-                                        <tr>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
 
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Provider)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.State)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Email)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.PhoneNumber)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.AppointmentDate)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.AppointmentTime)
-                                            </td>
-                                            <td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Provider)
+                                                    </td>
 
-                                                @{
-                                                    if (item.Approve == false)
-                                                    {
-                                                        <p align="center">No</p>
-                                                    }
-                                                    else
-                                                    {
-                                                        <p align="center">Yes</p>
-                                                    }
-                                                }
-                                            </td>
-                                            <td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Email)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.AppointmentDate)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.AppointmentTime)
+                                                    </td>
+                                                    <td>
 
-                                                @{
-                                                    if (item.Reject == false)
-                                                    {
-                                                        <p align="center">No</p>
-                                                    }
-                                                    else
-                                                    {
-                                                        <p align="center">Yes</p>
-                                                    }
-                                                }
-                                            </td>
+                                                        @{
+                                                            if (item.Approve == false)
+                                                            {
+                                                                <p align="center">No</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p align="center">Yes</p>
+                                                            }
+                                                        }
+                                                    </td>
+                                                    <td>
 
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Recommendation)
-                                            </td>
-                                            <td>
-                                                @{
-                                                    if (item.AuthorizationCode == null)
-                                                    {
-                                                        <p align="center">No Code</p>
-                                                    }
-                                                    else
-                                                    {
-                                                        @Html.DisplayFor(modelItem => item.AuthorizationCode)
-                                                    }
-                                                }
-                                            </td>
-                                            <td>
-                                                @{
-                                                    if (item.CompletedAnnualMedical == false)
-                                                    {
-                                                        <p align="center">No</p>
-                                                    }
-                                                    else
-                                                    {
-                                                        <p align="center">Yes</p>
-                                                    }
-                                                }
+                                                        @{
+                                                            if (item.Reject == false)
+                                                            {
+                                                                <p align="center">No</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p align="center">Yes</p>
+                                                            }
+                                                        }
+                                                    </td>
 
-                                            </td>
-                                           
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Diagnosis)
-                                            </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Recommendation)
+                                                    </td>
+                                                    <td>
+                                                        @{
+                                                            if (item.AuthorizationCode == null)
+                                                            {
+                                                                <p align="center">No Code</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                @Html.DisplayFor(modelItem => item.AuthorizationCode)
+                                                            }
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        @{
+                                                            if (item.CompletedAnnualMedical == false)
+                                                            {
+                                                                <p align="center">No</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p align="center">Yes</p>
+                                                            }
+                                                        }
 
+                                                    </td>
 
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Diagnosis)
+                                                    </td>
 
+                                                    <td>
+                                                        <a href="~/AdminDiagnosis/Edit/@item.Id" class='btn btn-facebook text-white' style='cursor:pointer; width:auto;'><i class="fa fa-edit" style="font-size:28px;color:white"></i> Approve Request</a>
 
 
-                                            <td>
-                                                <a asp-action="Edit" asp-route-id="@item.Id" class='btn btn-facebook text-white' style='cursor:pointer; width:auto;'><i class="fa fa-pencil"></i> Edit</a>
-                                            </td>
+                                                    </td>
 
-                                        </tr>
+                                                </tr>
 
-                                        }
+                                            }
 
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                }
+                                else
+                                {
+                                    <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="claims" width="70%">
+                                        <thead>
+                                            <tr>
+
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Provider)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.State)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Email)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.AppointmentDate)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.AppointmentTime)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Approve)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Reject)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Recommendation)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.AuthorizationCode)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.CompletedAnnualMedical)
+                                                </th>
+
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Diagnosis)
+                                                </th>
+
+
+                                                <th></th>
+
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Provider)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.State)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Email)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.AppointmentDate)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.AppointmentTime)
+                                                    </td>
+                                                    <td>
+
+                                                        @{
+                                                            if (item.Approve == false)
+                                                            {
+                                                                <p align="center">No</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p align="center">Yes</p>
+                                                            }
+                                                        }
+                                                    </td>
+                                                    <td>
+
+                                                        @{
+                                                            if (item.Reject == false)
+                                                            {
+                                                                <p align="center">No</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p align="center">Yes</p>
+                                                            }
+                                                        }
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Recommendation)
+                                                    </td>
+                                                    <td>
+                                                        @{
+                                                            if (item.AuthorizationCode == null)
+                                                            {
+                                                                <p align="center">No Code</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                @Html.DisplayFor(modelItem => item.AuthorizationCode)
+                                                            }
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        @{
+                                                            if (item.CompletedAnnualMedical == false)
+                                                            {
+                                                                <p align="center">No</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p align="center">Yes</p>
+                                                            }
+                                                        }
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Diagnosis)
+                                                    </td>
+
+
+
+
+
+                                                    <td>
+                                                        <a asp-action="Edit" asp-route-id="@item.Id" class='btn btn-facebook text-white' style='cursor:pointer; width:auto;'><i class="fa fa-pencil"></i> Edit</a>
+                                                    </td>
+
+                                                </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                }
                                 <br /><br /><br /><br /><br />
                                 <br /><br /><br /><br /><br />
                                 <br /><br /><br /><br /><br />

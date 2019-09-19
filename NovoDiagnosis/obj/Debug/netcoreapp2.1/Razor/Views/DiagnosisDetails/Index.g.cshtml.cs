@@ -491,7 +491,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n                                            </td>\r\n\r\n\r\n\r\n\r\n\r\n                                            <td>\r\n                                                ");
             EndContext();
             BeginContext(9208, 154, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca214495adb64027837cf662cec85510", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e7bae2474d53456ba7490d8c29cb76ff", async() => {
                 BeginContext(9325, 33, true);
                 WriteLiteral("<i class=\"fa fa-pencil\"></i> Edit");
                 EndContext();
@@ -566,7 +566,7 @@ using Microsoft.AspNetCore.Identity;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(10096, 37, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b97f6f718bb4159a0e350c257023ed3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c36c54b762c24e64869cee040dd8a8cc", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -129,7 +129,6 @@ C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.c
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.csproj.CoreCompileInputs.cache
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.RazorAssemblyInfo.cache
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.RazorAssemblyInfo.cs
-C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.AssemblyInfoInputs.cache
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.AssemblyInfo.cs
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\NovoDiagnosis.TagHelpers.input.cache
@@ -243,3 +242,4 @@ C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\Razor\Views\Dia
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\Razor\Views\DiagnosisDetails2\Details.g.cshtml.cs
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\Razor\Views\DiagnosisDetails2\Edit.g.cshtml.cs
 C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\Razor\Views\DiagnosisDetails2\Index.g.cshtml.cs
+C:\Users\akinb\source\diag\NovoDiagnosis\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

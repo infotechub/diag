@@ -66,7 +66,7 @@ using NovoDiagnosis.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(120, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "154b72464fb940418e0bcd48b9a3f9bb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38493fcc78c146119eae47fce944a9b3", async() => {
                 BeginContext(143, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -436,7 +436,7 @@ using NovoDiagnosis.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(3815, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e6b06f1d41f466d811cca281f3b1f27", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f46e307bee0644e8ab9e4225a96c6e80", async() => {
                 BeginContext(3860, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -471,7 +471,7 @@ using NovoDiagnosis.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(3888, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "696d376b558448c08d132cfb0771234c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d595853ff2da4cdf8bc8b041e363246c", async() => {
                 BeginContext(3936, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -506,7 +506,7 @@ using NovoDiagnosis.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(3967, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e7a7bad202f40fb87ad1aba872000ed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33da976318164e54a0064443a6c99f99", async() => {
                 BeginContext(4014, 6, true);
                 WriteLiteral("Delete");
                 EndContext();
