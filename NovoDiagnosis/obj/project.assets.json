@@ -12538,11 +12538,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\akinb\\source\\repos\\NovoDiagnosis\\NovoDiagnosis\\NovoDiagnosis.csproj",
+      "projectUniqueName": "C:\\Users\\akinb\\source\\diag\\NovoDiagnosis\\NovoDiagnosis.csproj",
       "projectName": "NovoDiagnosis",
-      "projectPath": "C:\\Users\\akinb\\source\\repos\\NovoDiagnosis\\NovoDiagnosis\\NovoDiagnosis.csproj",
+      "projectPath": "C:\\Users\\akinb\\source\\diag\\NovoDiagnosis\\NovoDiagnosis.csproj",
       "packagesPath": "C:\\Users\\akinb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\akinb\\source\\repos\\NovoDiagnosis\\NovoDiagnosis\\obj\\",
+      "outputPath": "C:\\Users\\akinb\\source\\diag\\NovoDiagnosis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

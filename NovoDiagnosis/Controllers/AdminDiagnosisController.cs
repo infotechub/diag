@@ -22,13 +22,13 @@ namespace NovoDiagnosis.Controllers
             _context = context;
         }
 
-        // GET: AdminDiagnosis
+        // GET: DiagnosisDetails2
         public async Task<IActionResult> Index()
         {
             return View(await _context.DiagnosisDetails.ToListAsync());
         }
 
-        // GET: AdminDiagnosis/Details/5
+        // GET: DiagnosisDetails2/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -46,18 +46,18 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // GET: AdminDiagnosis/Create
+        // GET: DiagnosisDetails2/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: AdminDiagnosis/Create
+        // POST: DiagnosisDetails2/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation,UserName")] DiagnosisDetails diagnosisDetails)
+        public async Task<IActionResult> Create([Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,AppointmentDate,AppointmentTime,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation,UserName,Status,History,PresentingComplain,Diagnosis,PlanTest")] DiagnosisDetails diagnosisDetails)
         {
             if (ModelState.IsValid)
             {
@@ -68,7 +68,7 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // GET: AdminDiagnosis/Edit/5
+        // GET: DiagnosisDetails2/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,12 +84,12 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // POST: AdminDiagnosis/Edit/5
+        // POST: DiagnosisDetails2/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation,UserName")] DiagnosisDetails diagnosisDetails)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,AppointmentDate,AppointmentTime,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation,UserName,Status,History,PresentingComplain,Diagnosis,PlanTest")] DiagnosisDetails diagnosisDetails)
         {
             if (id != diagnosisDetails.Id)
             {
@@ -119,7 +119,7 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // GET: AdminDiagnosis/Delete/5
+        // GET: DiagnosisDetails2/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,7 +137,7 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // POST: AdminDiagnosis/Delete/5
+        // POST: DiagnosisDetails2/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

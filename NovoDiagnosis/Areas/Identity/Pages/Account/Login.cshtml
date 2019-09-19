@@ -54,12 +54,12 @@
                             <br />
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <div class="form-group">
-                                <label asp-for="Input.StaffId"></label>
+                                <label asp-for="Input.StaffId">STAFF ID</label>
                                 <input asp-for="Input.StaffId" class="form-control" />
                                 <span asp-validation-for="Input.StaffId" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label asp-for="Input.Password"></label>
+                                <label asp-for="Input.Password">PASSWORD</label>
                                 <input asp-for="Input.Password" class="form-control" />
                                 <span asp-validation-for="Input.Password" class="text-danger"></span>
                             </div>
@@ -76,10 +76,14 @@
                             </div>
                             <div class="form-group">
                                 <p>
-                                    <a asp-page="./ForgotPassword">Forgot your password?</a>
+                                    Dummy Login Credentials for Admin <br />
+                                    Staff Id: ST243
+                                    Password: UnionBank123*
                                 </p>
                                 <p>
-                                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                                    Dummy Login Credentials for User<br />
+                                    Staff Id: UBS232<br />
+                                    Password: UnionBank123* <br />
                                 </p>
                             </div>
                         </form>

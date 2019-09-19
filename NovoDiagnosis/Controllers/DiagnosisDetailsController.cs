@@ -17,36 +17,19 @@ namespace NovoDiagnosis.Controllers
     public class DiagnosisDetailsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-        public DiagnosisDetailsController(ApplicationDbContext context, SignInManager<ApplicationUser> signInManager,
-            UserManager<ApplicationUser> userManager)
+        public DiagnosisDetailsController(ApplicationDbContext context)
         {
-            _userManager = userManager;
             _context = context;
-           
         }
-        
-        public IActionResult Index(string userProfile)
-        {
-            var username = _userManager.GetUserName(HttpContext.User);
 
-            var diagnos = _context.DiagnosisDetails.Where(x => x.UserName == username);
-            if (diagnos== null)
-            {
-                return NotFound();
-            }
-            return View(diagnos);
-        } 
-
-
-        // GET: DiagnosisDetails
-        public async Task<IActionResult> AdminView()
+        // GET: DiagnosisDetails2
+        public async Task<IActionResult> Index()
         {
             return View(await _context.DiagnosisDetails.ToListAsync());
         }
 
-        // GET: DiagnosisDetails/Details/5
+        // GET: DiagnosisDetails2/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -64,26 +47,23 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // GET: DiagnosisDetails/Create
-        public IActionResult Profile()
-        {
-           
-            return View();
-        }
-
-        // GET: DiagnosisDetails/Create
+        // GET: DiagnosisDetails2/Create
         public IActionResult Create()
         {
-            ViewBag.Provider = new SelectList(_context.Providers, "Id", "Name");
             return View();
         }
 
-        // POST: DiagnosisDetails/Create
+        public IActionResult Profile()
+        {
+            return View();
+        }
+
+        // POST: DiagnosisDetails2/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FullName,StaffId,Provider,State,Email,AppointmentDate,AppointmentTime,PhoneNumber,UserName")] DiagnosisDetails diagnosisDetails)
+        public async Task<IActionResult> Create([Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,AppointmentDate,AppointmentTime,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation,UserName,Status,History,PresentingComplain,Diagnosis,PlanTest")] DiagnosisDetails diagnosisDetails)
         {
             if (ModelState.IsValid)
             {
@@ -91,11 +71,10 @@ namespace NovoDiagnosis.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.Provider = new SelectList(_context.Providers, "Id", "Name", diagnosisDetails.Id);
             return View(diagnosisDetails);
         }
 
-        // GET: DiagnosisDetails/Edit/5
+        // GET: DiagnosisDetails2/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -108,17 +87,15 @@ namespace NovoDiagnosis.Controllers
             {
                 return NotFound();
             }
-
-            ViewBag.ProviderId = new SelectList(_context.Providers, "Id", "Name", diagnosisDetails.Id);
             return View(diagnosisDetails);
         }
 
-        // POST: DiagnosisDetails/Edit/5
+        // POST: DiagnosisDetails2/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation")] DiagnosisDetails diagnosisDetails)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,StaffId,Provider,State,Email,PhoneNumber,AppointmentDate,AppointmentTime,CompletedAnnualMedical,Approve,Reject,CreatedOn,UpdatedOn,AuthorizationCode,Recommendation,UserName,Status,History,PresentingComplain,Diagnosis,PlanTest")] DiagnosisDetails diagnosisDetails)
         {
             if (id != diagnosisDetails.Id)
             {
@@ -145,11 +122,10 @@ namespace NovoDiagnosis.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.ProviderId = new SelectList(_context.Providers, "Id", "lName", diagnosisDetails.Id);
             return View(diagnosisDetails);
         }
 
-        // GET: DiagnosisDetails/Delete/5
+        // GET: DiagnosisDetails2/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -167,7 +143,7 @@ namespace NovoDiagnosis.Controllers
             return View(diagnosisDetails);
         }
 
-        // POST: DiagnosisDetails/Delete/5
+        // POST: DiagnosisDetails2/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
